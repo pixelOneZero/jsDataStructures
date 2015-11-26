@@ -13,12 +13,58 @@
 
 <section class="topic">
   <h2>
-    Array.prototype.map()
+    Array.prototype.filter()
   </h2>
+  <p>
+    Purpose: Returns an array of unique elements from the array provided as input.
+  </p>
+  <h3>
+    Input:
+  </h3>
+  <code>
+    var advertisers = ["time warner","target","target","kohl's","target","nordstrom","cvs","nordstrom","sephora","walgreen's"];
+  </code>
+  <h3>
+    Example Usage:
+  </h3>
+  <code>
+    var uniqueAdvertisers = advertisers.filter(function(elem, i, array){
+      return advertisers.indexOf(elem) === i;
+    });
+  </code>
   <h3>
     Results:
   </h3>
-  <div class="results">
+  <div class="results" data-results-type="filter">
+
+  </div>
+</section>
+
+<section class="topic">
+  <h2>
+    Array.prototype.map()
+  </h2>
+   <p>
+    Purpose: Returns an array of transformed elements corresponding to elements in the input array.
+  </p>
+  <h3>
+    Input:
+  </h3>
+  <code>
+    var kilometers = [10, 30, 92, 53, 31, 79, 41, 49, 51, 91];
+  </code>
+  <h3>
+    Example Usage:
+  </h3>
+  <code>
+    var miles = kilometers.map(function(elem, i) {
+      return elem * 0.621371;
+    });
+  </code>
+  <h3>
+    Results:
+  </h3>
+  <div class="results" data-results-type="map">
 
   </div>
 </section>
@@ -27,28 +73,64 @@
   <h2>
     Array.prototype.reduce()
   </h2>
+  <p>
+    Purpose: Returns an aggregate value based on elements in a provided array or object.
+  </p>
+  <h3>
+    Input: 
+  </h3>
+  <code>
+    var topSellers = [{
+      'title': 'The Mythical Man Month',
+      'units': 3791
+    },
+    {
+      'title': 'The Mythical Man Month',
+      'units': 2703
+    },
+    {
+      'title': 'Eloquent JavaScript',
+      'units': 2889
+    },
+    {
+      'title': 'JavaScript: The Good Parts',
+      'units': 3016
+    },
+    {
+      'title': 'Secrets of the JavaScript Ninja',
+      'units': 4082
+    }];
+  </code>
+  <h3>
+    Example Usage:
+  </h3>
+  <code>
+    var totalUnits = topSellers.reduce(function(previousValue, element) {
+      return previousValue + element.units;
+    }, 0);
+  </code>
   <h3>
     Results:
   </h3>
-   <div class="results">
+   <div class="results" data-results-type="reduce">
     
   </div>
 </section>
 
 <section class="topic">
   <h2>
-    Big O
+    Big Object
   </h2>
   <h3>
     Results:
   </h3>
-   <div class="results">
+   <div class="results" data-results-type="bigobject">
     
   </div>
 </section>
 
 
-<script type="text/javascript" src="./js/app.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
 
 </body>
 </html>
